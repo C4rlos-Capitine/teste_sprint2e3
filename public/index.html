@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta de Domínio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="#" style="font-weight: bold; font-size: 25px; color: #ffffff;">
+        <i class="fas fa-globe m-2"></i>Consulta de Domínio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#" id="aboutLink"> Sobre a Aplicação <i class="fas fa-info-circle"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>  
+  <div class="container mt-5">
+    <h1 class="mb-4">Consulta de Domínio</h1>
+
+    <form id="domainForm" class="mb-3">
+        <div class="input-group">
+            <input type="text" id="domainInput" class="form-control" placeholder="Digite o domínio" aria-label="Digite o domínio" required autofocus>
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="submit" id="button-addon"><i class="fas fa-search"></i> Consultar</button>
+            </div>
+        </div>
+        <!-- Mensagem de erro -->
+        <div id="errorContainer" class="mt-2"></div>
+    </form>
+    <div id="domainInfo">
+      <table id="domainTable" class="table">
+        <thead>
+          <tr>
+            <th>Provedor</th>
+            <th>Endereço IP</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Os resultados serão inseridos aqui dinamicamente -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- Seção "Sobre a Aplicação" -->
+  <div id="aboutContent">
+    <button id="closeAbout"
+      style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 20px; cursor: pointer;">&times;</button>
+    <p><strong>Sobre a Aplicação</strong></p>
+    <p>Esta aplicação permite consultar informações de domínios, incluindo o provedor e o endereço IP associado.</p>
+    <p>Ela é útil para identificar detalhes de um domínio, como o provedor de hospedagem e o endereço IP atribuído.</p>
+    <p>Por exemplo, ao inserir "google.com" no campo de busca e clicar em "Consultar", você verá informações como o provedor de hospedagem e o endereço IP associado ao domínio "example.com".</p>
+    <p>Para usar a aplicação, insira o domínio desejado no campo de busca acima e clique em "Consultar". Os resultados serão exibidos abaixo.</p>
+  </div>
+  
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container">
+      <h5 class="card-title">Membros da Equipe</h5>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card member-card">
+            <img src="assets/img/filipe.png" class="card-img-center" alt="Foto de Filipe">
+            <div class="card-body">
+              <h5 class="card-title">Filipe Domingos dos Santos</h5>
+              <ul class="list-unstyled contact-icons">
+                <li><a href="mailto:filipe.santos@academy.compass.uol"><i class="fas fa-envelope"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/filipe-dos-santos-b2147311a/"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://www.facebook.com/filipe.domingos.31"><i class="fab fa-facebook"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card member-card">
+            <img src="assets/img/lirio.png" class="card-img-top" alt="Foto de  Lirio">
+            <div class="card-body">
+              <h5 class="card-title">Lírio Manga</h5>
+              <ul class="list-unstyled contact-icons">
+                <li><a href="mailto:lirio.manga@academy.compass.uol"><i class="fas fa-envelope"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card member-card">
+            <img src="assets/img/carlos.png" class="card-img-top" alt="Foto de Carlos">
+            <div class="card-body">
+              <h5 class="card-title">Carlos Captine Mutemba</h5>
+              <ul class="list-unstyled contact-icons">
+                <li><a href="mailto:carlos.mutemba@academy.compass.uol"><i class="fas fa-envelope"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/carlos-mutemba-45801526b/"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="mt-3">© 2024 Equipe 6 - API Who Hosts This <br> Programa de Bolsas Compass UOL / AWS e Moçambique</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (opcional, necessário apenas se você estiver usando funcionalidades JavaScript do Bootstrap) -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- jQuery (necessário apenas se você estiver usando funcionalidades JavaScript do Bootstrap que requerem jQuery) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <!--Custom Javascript-->
+  <script src="assets/js/scripts.js"></script>
+  <script>
+    $(document).ready(function() {
+        $('#domainForm').submit(function(event) {
+            event.preventDefault();
+            
+            var input = $('#domainInput').val();
+            var pattern = /^[^\s@]+(\.[^\s@]+)+$/;
+
+            if (!pattern.test(input)) {
+                $('#errorContainer').html('<div class="alert alert-danger" role="alert">Por favor, insira um domínio válido no formato www.google.com ou google.com.</div>');
+            } else {
+                $('#errorContainer').empty();
+            }
+        });
+    });
+</script>
+</body>
+
+</html>
